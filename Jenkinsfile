@@ -11,7 +11,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'mvn test'
+				withMaven(maven : 'M2_HOME') {
+					bat 'mvn test'
+				}
             }
 
 
