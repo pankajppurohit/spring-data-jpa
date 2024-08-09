@@ -71,7 +71,7 @@ public class EcommerceApplicationIntegrationTest {
         Assertions.assertNotNull(orders);
         Assertions.assertEquals(0, orders.size());
     }
-
+	//Failing junit commented
     //@Test
     void givenPostOrder_whenBodyRequestMatcherJson_thenResponseContainsEqualObjectProperties() {
         final ResponseEntity<Order> postResponse = restTemplate.postForEntity("http://localhost:" + port + "/api/orders", prepareOrderForm(), Order.class);
